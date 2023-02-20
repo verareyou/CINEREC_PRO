@@ -46,12 +46,12 @@ const Nav = () => {
         <span className="text-[red]  ">.</span>
       </Link>
       <div
-        className={`navlink font-light max-md:hidden flex basis-2 flex-row text-[#696969] items-center justify-center `}
+        className={`navlink font-light max-md:hidden flex basis-2 flex-row text-[#4d4d4d] items-center justify-center `}
       >
         <Link className=" duration-200 hover:text-[white] invert " to="/">
           Home
         </Link>
-        <Link className="mx-4 duration-200 hover:text-[#d2d2d2] invert ">
+        <Link className="mx-4 duration-200 hover:text-[#ffffff] invert ">
           Contact
         </Link>
         <Link className=" duration-200 hover:text-[white] invert " to="/about">
@@ -70,7 +70,7 @@ const Nav = () => {
 
       {/* mobile nav */}
       <div
-        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#000000b4] backdrop-blur-[5px] fixed top-0 left-0 z-[10] duration-200 ${
+        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[10] duration-200 ${
           navOpen ? "translate-x-0 blur-0 " : "translate-x-[120%] blur-[10px]"
         }`}
         ref={navRef}

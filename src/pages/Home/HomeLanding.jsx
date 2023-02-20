@@ -54,7 +54,7 @@ const HomeLanding = () => {
         @media (max-width: 500px) {
             .landing {
                 background-position-y: ${-scrollY * 0.5 - 10}px;
-            background-size: 140%;
+            background-size: 145%;
             }
         }
         `}

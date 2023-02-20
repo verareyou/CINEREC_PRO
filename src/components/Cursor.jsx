@@ -70,10 +70,10 @@ const Cursor = () => {
     <>
       <div
         className={
-          "cursor max-lg:hidden fixed top-0 left-0 w-[20px] h-[20px] bg-[#4d5e66b3] rounded-full translate-x-[-50%] translate-y-[-50%] pointer-events-none z-[9999] duration-50 " +
+          "cursor pointer-events-none max-lg:hidden fixed top-0 left-0 w-[20px] h-[20px] bg-[#4d5e66b3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9999] duration-50 " +
           (hidden ? "c--hidden opacity-0  " : " ") +
           (click ? "c--click translate-x-[-50%] translate-y-[-50%] scale-[2] duration-100 " : " ") +
-          (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#ffffff84] scale-[2] duration-100 " : " ")
+          (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#7d8e9b84] scale-[2] duration-100 " : " ")
         }
         style={{
           left: `${position.x}px`,
