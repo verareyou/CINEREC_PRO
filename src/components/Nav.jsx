@@ -5,14 +5,17 @@ import { motion } from "framer-motion";
 import { RandomReveal } from "react-random-reveal";
 
 const Nav = () => {
-  const Navigate = useNavigate();
+  // const Navigate = useNavigate();
   // mobile nav
   const [navOpen, setNavOpen] = useState(false);
   
 
   const toggleNav = () => {
-    setNavOpen(!navOpen);
+      setNavOpen(!navOpen);
+
   };
+
+
 
   const currentroute = window.location.pathname;
   // console.log(currentroute);
@@ -57,7 +60,9 @@ const Nav = () => {
       {/* mobile nav */}
       <div
         className="hamburger md:hidden flex flex-col justify-between w-8 cursor-pointer "
-        onClick={toggleNav}
+        onClick={() => {
+          toggleNav();
+          } }
       >
         <div className="hamburger-line w-full h-[2px] bg-[#c8c8c8] "></div>
         <div className="hamburger-line w-full h-[2px] my-[2px] bg-[#c8c8c8] "></div>
@@ -65,10 +70,11 @@ const Nav = () => {
       </div>
 
       {/* mobile nav */}
+
       <div
-        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[10] duration-200 ${
-          navOpen ? "translate-x-0 blur-0 " : "translate-x-[120%] blur-[10px]"
-        }`}
+        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[10] duration-50 
+        // ${navOpen ? "translate-x-0 blur-0 " : "translate-x-[120%] "}
+        `}
       >
         <div className="mobile-nav-link flex flex-col justify-center items-center w-full h-full ">
           <Link className=" duration-200 hover:text-[white] " to="/">

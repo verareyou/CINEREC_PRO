@@ -36,7 +36,7 @@ const About = () => {
         opacity: [0, 1],
     }}
     transition={{
-        duration: 0.8,
+        duration: 0.4,
         ease: "easeInOut",
         times: [0, 1],
     }}
