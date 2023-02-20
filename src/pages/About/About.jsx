@@ -13,6 +13,9 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <>
+    <head>
+      <title>About</title>
+    </head>
       <style>
         {`
         .whole {

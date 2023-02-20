@@ -9,7 +9,12 @@ function App() {
 
   return (
     <div className="App lg:cursor-none overflow-x-hidden ">
-      <div className="filter pointer-events-none fixed h-full max-lg:hidden w-full top-0 bottom-0 z-50 bg-[#ffffff28]"></div>
+      <head>
+      <meta name="description" content="Cinerec" />
+        {/* <link rel="icon" href="/logo.png" /> */}
+        <link rel="favicon" href="/logo.png" />
+      </head>
+      {/* <div className="filter pointer-events-none fixed h-full max-lg:hidden w-full top-0 bottom-0 z-50 bg-[#ffffff28]"></div> */}
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

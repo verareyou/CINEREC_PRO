@@ -10,6 +10,11 @@ const Landing = () => {
   return (
     <motion.div
     className="home ">
+      <head>
+        <title>Cinerec</title>
+        <meta name="description" content="Cinerec" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+      </head>
       <Cursor />
       <Nav />
       <HomeLanding />
