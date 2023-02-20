@@ -1,7 +1,8 @@
 import React from "react";
-import img1 from "../assets/img1.jpg";
+import img1 from "../assets/img8.jpg";
 import { useState, useEffect } from "react";
 import { motion, transform } from "framer-motion";
+import { RandomReveal } from "react-random-reveal";
 
 const HomeLanding = () => {
   // parallax background
@@ -29,7 +30,7 @@ const HomeLanding = () => {
             background-image: url(${img1});
             background-size: cover;
             background-position: center;
-            background-position-y: ${-scrollY * 0.5 - 500}px;
+            background-position-y: ${-scrollY * 0.5 - 800}px;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-blend-mode: multiply;
@@ -40,7 +41,7 @@ const HomeLanding = () => {
         }
         @media (max-width: 1000px) {
             .landing {
-                background-position-y: ${-scrollY * 0.5 - 200}px;
+                background-position-y: ${-scrollY * 0.5 - 300}px;
             }
         }
         @media (max-width: 768px) {
@@ -52,16 +53,13 @@ const HomeLanding = () => {
         }
         @media (max-width: 500px) {
             .landing {
-                background-position-y: ${-scrollY * 0.5 - 50}px;
+                background-position-y: ${-scrollY * 0.5 - 10}px;
             background-size: 140%;
             }
         }
         `}
       </style>
-      <motion.div
-        
-        className="landing animate-landing flex items-center overflow-hidden bg-black justify-center text-white "
-      >
+      <motion.div className="landing animate-landing flex items-center overflow-hidden bg-black justify-center text-white ">
         <motion.div
           // animate={{
           //   scale: [2, 1],
@@ -75,7 +73,14 @@ const HomeLanding = () => {
           // }}
           className="hero animate-scaling text-[10vw] font-bold "
         >
-          Name it.
+          <RandomReveal
+        isPlaying
+      duration={1} characters="CINEREC" />
+          <span
+            className="text-[red] animate-blink "
+          >
+            .
+          </span>
         </motion.div>
       </motion.div>
     </>
