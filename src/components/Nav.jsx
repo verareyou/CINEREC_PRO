@@ -8,11 +8,7 @@ const Nav = () => {
   const Navigate = useNavigate();
   // mobile nav
   const [navOpen, setNavOpen] = useState(false);
-  const [navHeight, setNavHeight] = useState(0);
-  const navRef = React.useRef();
-  useEffect(() => {
-    setNavHeight(navRef.current.getBoundingClientRect().height);
-  }, []);
+  
 
   const toggleNav = () => {
     setNavOpen(!navOpen);
@@ -73,7 +69,6 @@ const Nav = () => {
         className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[10] duration-200 ${
           navOpen ? "translate-x-0 blur-0 " : "translate-x-[120%] blur-[10px]"
         }`}
-        ref={navRef}
       >
         <div className="mobile-nav-link flex flex-col justify-center items-center w-full h-full ">
           <Link className=" duration-200 hover:text-[white] " to="/">
