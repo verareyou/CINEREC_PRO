@@ -70,7 +70,7 @@ const Nav = () => {
       {/* mobile nav */}
 
       <div
-        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[10] duration-75 ease-in-out 
+        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[9999] duration-75 ease-in-out 
         // ${navOpen ? "translate-x-0 blur-0 " : "translate-x-[120%] "}
         `}
       >
