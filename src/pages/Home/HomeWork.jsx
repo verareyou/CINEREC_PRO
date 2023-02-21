@@ -78,7 +78,7 @@ const HomeWork = () => {
             Work
           <Link
             to="/work"
-            className=" cursor-pointer text-[#b3b3b3] duration-150 hover:text-[white] text-lg font-thin "
+            className=" cursor-pointer text-[#b3b3b3] duration-150 hover:text-[white] z-[9998] text-lg font-light text-clip "
           >
           See my work
           </Link>
