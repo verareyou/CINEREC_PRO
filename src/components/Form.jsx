@@ -6,7 +6,7 @@ function Form() {
     return <p>Thanks for joining!</p>;
   }
   return (
-    <form className="text-[#454d59] z-[99999] " onSubmit={handleSubmit}>
+    <form className="text-[#454d59] z-[99] " onSubmit={handleSubmit}>
       <div className="email flex flex-col ">
         <label className="mb-4" htmlFor="email  ">
           Email Address
@@ -30,7 +30,9 @@ function Form() {
         />
       </div>
       <button
-        className=" bg-[#41474c] px-4 py-1 backdrop-blur-sm text-[white] rounded-full hover:bg-[#8895a322] duration-150 hover:text-white z-[99999] mt-[10%] "
+        className=" bg-[#41474c] px-4 py-1 backdrop-blur-sm text-[white] rounded-full max-lg:hover:bg-[#8895a322] duration-150 hover:text-white z-[99999] mt-[10%]
+        max-sm:mt-[20%]
+        "
         type="submit"
         disabled={state.submitting}
       >

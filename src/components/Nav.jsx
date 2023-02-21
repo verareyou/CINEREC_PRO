@@ -8,11 +8,9 @@ const Nav = () => {
   // const Navigate = useNavigate();
   // mobile nav
   const [navOpen, setNavOpen] = useState(false);
-  
 
   const toggleNav = () => {
-      setNavOpen(!navOpen);
-
+    setNavOpen(!navOpen);
   };
 
   const currentroute = window.location.pathname;
@@ -38,7 +36,10 @@ const Nav = () => {
       }}
       className=" Nav overflow-hidden flex flex-row w-full py-12 max-sm:py-4 max-sm:px-8 px-24 z-[9999] text-white items-center justify-between absolute "
     >
-      <Link to="/" className={`Link cursor-pointer logo duration-150 hover:text-white font-bold ${color()} `}>
+      <Link
+        to="/"
+        className={`Link cursor-pointer logo duration-150 hover:text-white font-bold ${color()} `}
+      >
         CINEREC
         <span className="text-[red]  ">.</span>
       </Link>
@@ -48,7 +49,10 @@ const Nav = () => {
         <Link className=" duration-200 hover:text-[black] invert " to="/">
           Home
         </Link>
-        <Link to="/contact" className="mx-4 duration-200 hover:text-[black] invert ">
+        <Link
+          to="/contact"
+          className="mx-4 duration-200 hover:text-[black] invert "
+        >
           Contact
         </Link>
         <Link className=" duration-200 hover:text-[black] invert " to="/about">
@@ -60,7 +64,7 @@ const Nav = () => {
         className="hamburger md:hidden flex flex-col justify-between w-8 cursor-pointer "
         onClick={() => {
           toggleNav();
-          } }
+        }}
       >
         <div className="hamburger-line w-full h-[2px] bg-[#c8c8c8] "></div>
         <div className="hamburger-line w-full h-[2px] my-[2px] bg-[#c8c8c8] "></div>
@@ -70,16 +74,18 @@ const Nav = () => {
       {/* mobile nav */}
 
       <div
-        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[9999] duration-75 ease-in-out 
-        // ${navOpen ? "translate-x-0 blur-0 " : "translate-x-[120%] "}
+        className={`mobile-nav flex flex-col justify-center items-center w-full h-[100vh] bg-[#1a22299c] backdrop-blur-[5px] fixed top-0 left-0 z-[9999] duration-75 ease-linear 
+        ${navOpen ? "translate-x-0 blur-0 " : "translate-x-[120%] "}
         `}
       >
         <div className="mobile-nav-link flex flex-col justify-center items-center w-full h-full ">
-          <Link className=" duration-200 hover:text-[white] " to="/">
+          <Link className=" " to="/">
             Home
           </Link>
-          <Link to="/contact" className="mx-4 duration-200 hover:text-[white] ">Contact</Link>
-          <Link className=" duration-200 hover:text-[white] " to="/about">
+          <Link to="/contact" className="my-4 ">
+            Contact
+          </Link>
+          <Link className=" " to="/about">
             About
           </Link>
           <div
