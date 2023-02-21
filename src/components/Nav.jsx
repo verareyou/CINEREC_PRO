@@ -38,22 +38,22 @@ const Nav = () => {
         ease: "easeInOut",
         times: [0, 1],
       }}
-      className=" Nav overflow-hidden flex flex-row w-full py-12 max-sm:py-4 max-sm:px-8 px-24 z-[90] text-white items-center justify-between absolute "
+      className=" Nav overflow-hidden flex flex-row w-full py-12 max-sm:py-4 max-sm:px-8 px-24 z-[9999] text-white items-center justify-between absolute "
     >
-      <Link to="/" className={`Link cursor-pointer logo font-bold ${color()} `}>
+      <Link to="/" className={`Link cursor-pointer logo duration-150 hover:text-white font-bold ${color()} `}>
         CINEREC
         <span className="text-[red]  ">.</span>
       </Link>
       <div
         className={`navlink font-light max-md:hidden flex basis-2 flex-row text-[#4d4d4d] items-center justify-center `}
       >
-        <Link className=" duration-200 hover:text-[white] invert " to="/">
+        <Link className=" duration-200 hover:text-[black] invert " to="/">
           Home
         </Link>
-        <Link className="mx-4 duration-200 hover:text-[#ffffff] invert ">
+        <Link to="/contact" className="mx-4 duration-200 hover:text-[black] invert ">
           Contact
         </Link>
-        <Link className=" duration-200 hover:text-[white] invert " to="/about">
+        <Link className=" duration-200 hover:text-[black] invert " to="/about">
           About
         </Link>
       </div>
@@ -80,7 +80,7 @@ const Nav = () => {
           <Link className=" duration-200 hover:text-[white] " to="/">
             Home
           </Link>
-          <Link className="mx-4 duration-200 hover:text-[white] ">Contact</Link>
+          <Link to="/contact" className="mx-4 duration-200 hover:text-[white] ">Contact</Link>
           <Link className=" duration-200 hover:text-[white] " to="/about">
             About
           </Link>

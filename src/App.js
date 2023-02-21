@@ -4,6 +4,7 @@ import About from "./pages/About/About";
 import Work from "./pages/Work/Work";
 import { useEffect, useState } from "react";
 import Cursor from "./components/Cursor";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>
