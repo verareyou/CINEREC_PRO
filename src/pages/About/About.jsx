@@ -45,7 +45,7 @@ const About = () => {
     }}
       className="whole ">
         <Nav />
-        <div className="textabout text-[20vw] font-black z-[-1] blur-[10px] max-md:blur-sm animate-scalingabout text-[#cad4de] duration-150 absolute top-[-20%] max-lg:top-[-10%] max-md:top-[-8%] max-sm:top-[-5%]  ">
+        <div className="textabout text-[20vw] font-black z-[-1] blur-[10px] max-md:blur-sm animate-scalingabout text-[#cacfd3] duration-150 absolute top-[-20%] max-lg:top-[-10%] max-md:top-[-8%] max-sm:top-[-5%]  ">
           <RandomReveal isPlaying={true} duration={0.5} characters="ABOUT" />
         </div>
         <div className=" top-[100px] w-full min-h-full  backdrop-filter backdrop-blur-smd flex flex-col  ">
@@ -65,25 +65,25 @@ const About = () => {
           </div>
           <div className="social mt-4 flex flex-row duration-150 hover:text-[#c3c3c3] ml-24 max-sm:ml-8 items-center">
             <a
-              className=" w-8 duration-75 hover:text-[black] "
+              className=" w-8 duration-75 hover:text-[white] z-[99999] "
               href="https://www.facebook.com/"
             >
               <FacebookIcon />
             </a>
             <a
-              className=" w-8 duration-75 hover:text-[black] mx-4 "
+              className=" w-8 duration-75 hover:text-[white] z-[99999] mx-4 "
               href="https://www.instagram.com/"
             >
               <InstagramIcon />
             </a>
             <a
-              className=" w-8 duration-75 hover:text-[black] mr-4 "
+              className=" w-8 duration-75 hover:text-[white] z-[99999] mr-4 "
               href="https://www.linkedin.com/"
             >
               <LinkedInIcon />
             </a>
             <a
-              className=" w-8 duration-75 hover:text-[black] "
+              className=" w-8 duration-75 hover:text-[white] z-[99999] "
               href="https://www.twitter.com/"
             >
               <TwitterIcon />

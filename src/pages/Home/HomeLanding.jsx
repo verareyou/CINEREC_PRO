@@ -10,6 +10,7 @@ const HomeLanding = () => {
 
   const logit = () => {
     setScrollY(window.pageYOffset);
+    // console.log(scrollY);
   };
 
   useEffect(() => {
@@ -35,6 +36,7 @@ const HomeLanding = () => {
             background-attachment: fixed;
             background-blend-mode: multiply;
             background-color: rgba(0, 0, 0, 0.5);
+            filter: opacity(0.88);
             height: 100vh;
             position: relative;
             z-index: -1;

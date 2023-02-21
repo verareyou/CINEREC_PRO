@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Cursor = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: -100, y: -100 });
   const [hidden, setHidden] = useState(false);
   const [click, setClick] = useState(false);
   const [linkHover, setLinkHover] = useState(false);
@@ -9,16 +10,16 @@ const Cursor = () => {
   useEffect(() => {
     const addEventListeners = () => {
       document.addEventListener("mousemove", mMove);
-    //   document.addEventListener("mouseenter", mEnter);
-    //   document.addEventListener("mouseleave", mLeave);
+      document.addEventListener("mouseenter", mEnter);
+      document.addEventListener("mouseleave", mLeave);
       document.addEventListener("mousedown", mDown);
       document.addEventListener("mouseup", mUp);
     };
 
     const removeEventListeners = () => {
       document.removeEventListener("mousemove", mMove);
-    //   document.removeEventListener("mouseenter", mEnter);
-    //   document.removeEventListener("mouseleave", mLeave);
+      document.removeEventListener("mouseenter", mEnter);
+      document.removeEventListener("mouseleave", mLeave);
       document.removeEventListener("mousedown", mDown);
       document.removeEventListener("mouseup", mUp);
     };
@@ -35,13 +36,13 @@ const Cursor = () => {
       setPosition({ x: el.clientX, y: el.clientY });
     };
 
-    // const mLeave = () => {
-    //   setHidden(true);
-    // };
+    const mLeave = () => {
+      setHidden(true);
+    };
 
-    // const mEnter = () => {
-    //   setHidden(false);
-    // };
+    const mEnter = () => {
+      setHidden(false);
+    };
 
     const addLinkEvents = () => {
       document.querySelectorAll("a").forEach((el) => {
@@ -68,18 +69,47 @@ const Cursor = () => {
 
   return (
     <>
-      <div
+      <motion.div
         className={
-          "cursor pointer-events-none max-lg:hidden fixed top-0 left-0 w-[20px] h-[20px] bg-[#4d5e66b3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9998] duration-50 " +
+          "cursor pointer-events-none max-lg:hidden fixed top-[0px] left-[0px] w-[25px] h-[25px] bg-[#2a363c0] border-[1px] border-[#999ea3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9998] duration-50 " +
           (hidden ? "c--hidden opacity-0  " : " ") +
-          (click ? "c--click translate-x-[-50%] translate-y-[-50%] scale-[2] duration-100 " : " ") +
-          (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] scale-[2.5] duration-100 " : " ")
+          (click ? "c--click translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] border-none scale-[1.75] duration-100 " : " ") +
+          (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] border-none scale-[2] duration-100 " : " ")
         }
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
+        // style={{
+        //   left: `${position.x}px`,
+        //   top: `${position.y}px`,
+        // }}
+        animate={{
+          left: position.x,
+          top: position.y,
         }}
-      />
+        transition={{
+          duration: 0.1,
+          ease: "easeOut",
+        }}
+      >
+
+      </motion.div>
+        <motion.div
+          className={
+            "cursor pointer-events-none max-lg:hidden fixed top-[0px] left-[0px] w-[16px] h-[16px] bg-[#0f181ab3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9998] duration-50 " +
+            (hidden ? "c--hidden opacity-0  " : " ") +
+            (click ? "c--click translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] scale-[2] duration-100 " : " ") +
+            (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] scale-[2.5] duration-100 " : " ")
+          }
+          // style={{
+
+          // }}
+          animate={{
+            left: position.x,
+            top: position.y,
+          }}
+          transition={{
+            duration: 0.12,
+            ease: "easeOut",
+          }}
+        ></motion.div>
     </>
   );
 };

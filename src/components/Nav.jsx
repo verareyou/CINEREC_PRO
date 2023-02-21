@@ -15,8 +15,6 @@ const Nav = () => {
 
   };
 
-
-
   const currentroute = window.location.pathname;
   // console.log(currentroute);
 
@@ -45,7 +43,7 @@ const Nav = () => {
         <span className="text-[red]  ">.</span>
       </Link>
       <div
-        className={`navlink font-light max-md:hidden flex basis-2 flex-row text-[#4d4d4d] items-center justify-center `}
+        className={`navlink font-medium max-md:hidden flex basis-2 flex-row text-[#564f4c] items-center justify-center `}
       >
         <Link className=" duration-200 hover:text-[black] invert " to="/">
           Home
