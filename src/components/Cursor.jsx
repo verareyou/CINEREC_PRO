@@ -71,43 +71,32 @@ const Cursor = () => {
     <>
       <motion.div
         className={
-          "cursor pointer-events-none max-lg:hidden fixed top-[0px] left-[0px] w-[25px] h-[25px] bg-[#2a363c0] border-[1px] border-[#999ea3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9998] duration-50 " +
+          "cursor pointer-events-none max-lg:hidden fixed top-[0px] left-[0px] w-[25px] h-[25px] bg-[#2a363c0] border-[1px] border-[#999ea3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9995]  duration-50 " +
           (hidden ? "c--hidden opacity-0  " : " ") +
           (click ? "c--click translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] border-none scale-[1.75] duration-100 " : " ") +
-          (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] border-none scale-[2] duration-100 " : " ")
+          (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#1e283055] border-none scale-[2] duration-100 " : " ")
         }
-        // style={{
-        //   left: `${position.x}px`,
-        //   top: `${position.y}px`,
-        // }}
         animate={{
           left: position.x,
           top: position.y,
         }}
         transition={{
-          duration: 0.1,
-          ease: "easeOut",
+          duration: 0,
+          ease: "linear",
         }}
       >
 
       </motion.div>
         <motion.div
           className={
-            "cursor pointer-events-none max-lg:hidden fixed top-[0px] left-[0px] w-[16px] h-[16px] bg-[#0f181ab3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9998] duration-50 " +
+            "cursor pointer-events-none max-lg:hidden fixed top-[0px] left-[0px] w-[16px] h-[16px] bg-[#0f181ab3] rounded-full translate-x-[-50%] translate-y-[-50%] z-[9995] duration-50 " +
             (hidden ? "c--hidden opacity-0  " : " ") +
             (click ? "c--click translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] scale-[2] duration-100 " : " ") +
-            (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#1e2830af] scale-[2.5] duration-100 " : " ")
+            (linkHover ? "c--hover translate-x-[-50%] translate-y-[-50%] bg-[#1e283060] scale-[2.5] duration-100 " : " ")
           }
-          // style={{
-
-          // }}
           animate={{
             left: position.x,
             top: position.y,
-          }}
-          transition={{
-            duration: 0.12,
-            ease: "easeOut",
           }}
         ></motion.div>
     </>
