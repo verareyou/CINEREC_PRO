@@ -65,25 +65,25 @@ const About = () => {
           </div>
           <div className="social mt-4 flex flex-row duration-150 hover:text-[#c3c3c3] ml-24 max-sm:ml-8 items-center">
             <a
-              className=" w-8 duration-75 hover:text-[white] z-[99999] "
+              className=" w-8 duration-75 hover:text-[white] z-[9996] "
               href="https://www.facebook.com/"
             >
               <FacebookIcon />
             </a>
             <a
-              className=" w-8 duration-75 hover:text-[white] z-[99999] mx-4 "
+              className=" w-8 duration-75 hover:text-[white] z-[9996] mx-4 "
               href="https://www.instagram.com/"
             >
               <InstagramIcon />
             </a>
             <a
-              className=" w-8 duration-75 hover:text-[white] z-[99999] mr-4 "
+              className=" w-8 duration-75 hover:text-[white] z-[9996] mr-4 "
               href="https://www.linkedin.com/"
             >
               <LinkedInIcon />
             </a>
             <a
-              className=" w-8 duration-75 hover:text-[white] z-[99999] "
+              className=" w-8 duration-75 hover:text-[white] z-[9996] "
               href="https://www.twitter.com/"
             >
               <TwitterIcon />
