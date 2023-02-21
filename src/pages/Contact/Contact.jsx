@@ -75,8 +75,8 @@ const Contact = () => {
         >
           <RandomReveal isPlaying={true} duration={0.5} characters="Contact" />
         </div>
-        <div className=" top-[100px] z-[99999] w-full min-h-full  backdrop-filter backdrop-blur-smd flex flex-col  ">
-          <div className=" p-24 duration-150 z-[9999] max-sm:p-8 lg:mr-56 mt-[19vh] max-md:mt-[10vh] max-sm:mt-[10vh] ">
+        <div className=" top-[100px] z-[999] w-full min-h-full  backdrop-filter backdrop-blur-smd flex flex-col  ">
+          <div className=" p-24 duration-150 z-[9998] max-sm:p-8 lg:mr-56 mt-[19vh] max-md:mt-[10vh] max-sm:mt-[10vh] ">
             <div className=" animate-scalingabout form text-[#7e868f] text-[1.25vw] h-96 w-96 max-md:w-full max-[500px]:w-full max-sm:text-[2vh] max-lg:text-[1.75vw]  font-medium">
               <Form />
             </div>
