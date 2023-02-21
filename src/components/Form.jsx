@@ -30,7 +30,7 @@ function Form() {
         />
       </div>
       <button
-        className=" bg-[#41474c] px-4 py-1 backdrop-blur-sm text-[white] rounded-full hover:bg-[#8895a322] duration-150 hover:text-white z-[999999] mt-[10%] "
+        className=" bg-[#41474c] px-4 py-1 backdrop-blur-sm text-[white] rounded-full hover:bg-[#8895a322] duration-150 hover:text-white z-[99999] mt-[10%] "
         type="submit"
         disabled={state.submitting}
       >
